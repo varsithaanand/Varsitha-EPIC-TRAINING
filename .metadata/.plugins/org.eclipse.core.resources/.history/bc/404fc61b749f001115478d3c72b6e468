@@ -1,0 +1,31 @@
+package controller;
+import java.util.Scanner;
+import model.CustomerModel;
+public class CustomerController {
+int id=0;	
+CustomerModel[] cusArray=new CustomerModel[100]; 
+
+ public void createCustomer()
+ {
+	 Scanner in=new Scanner(System.in);
+	 System.out.println("Enter the name");
+	 String name=in.nextLine();
+	 System.out.println("Enter the age");
+	 int age=in.nextInt();
+	 CustomerModel cm=new CustomerModel(id,name,age);
+	 cusArray[id++]=cm;
+	 
+ }
+ 
+ public void displayCustomer()
+ {
+	 for(int i=0;i<id;i++) {
+		 for(int j=0;j<cusArray.length;j++)
+		 {
+			 System.out.println(cusArray[j]); 
+		 }
+		 
+	 }
+ }
+ 
+}

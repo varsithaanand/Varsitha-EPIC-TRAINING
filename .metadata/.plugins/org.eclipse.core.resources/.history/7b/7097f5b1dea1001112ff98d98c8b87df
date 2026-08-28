@@ -1,0 +1,42 @@
+package matrix2d;
+import java.util.Scanner;
+public class SumMatrix {
+
+	public static void main(String[] args) {
+		Scanner in=new Scanner(System.in);
+		int n=in.nextInt();
+		int[][] arr1=new int[n][n];
+		int[][] arr2=new int[n][n];
+		int[][] sum=new int[n][n];
+		for(int i=0;i<n;i++)
+		{
+			for(int j=0;j<n;j++)
+			{
+				arr1[i][j]=in.nextInt();
+			}
+		}
+		for(int i=0;i<n;i++)
+		{
+			for(int j=0;j<n;j++)
+			{
+				arr2[i][j]=in.nextInt();
+			}
+		}
+		for(int i=0;i<2;i++)
+		{
+			for(int j=0;j<2;j++)
+			{
+				sum[i][j]=arr1[i][j]+arr2[i][j];
+			}
+		}
+		for(int i=0;i<2;i++)
+		{
+			for(int j=0;j<2;j++)
+			{
+				System.out.print(sum[i][j]+" ");
+			}
+			System.out.println();
+		}
+	}
+
+}
