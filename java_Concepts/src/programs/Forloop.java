@@ -9,6 +9,13 @@ public class Forloop {
 		for(int i=0;i<str.length();i++) {
 			
 		asc=str.charAt(i)+1;
+		/*
+		    * separate the operators and numbers
+		    * numbers-str[0],str[1]
+		    * operator-opr[0]
+		    * int asc=(int)(str.charAt(i) -'a')+1;
+		    * str2+=(char)((asc%26) +'a');
+		*/
 		if(asc>=65 && asc <=91) {			
 		
 		if(asc>90) {
@@ -36,10 +43,6 @@ public class Forloop {
 		}
 
 	}
-   /*
-    * separate the operators and numbers
-    * numbers-str[0],str[1]
-    * operator-opr[0]
-    */
+   
 
 
