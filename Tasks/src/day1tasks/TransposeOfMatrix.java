@@ -1,9 +1,28 @@
 package day1tasks;
 
+import java.util.Scanner;
+
 public class TransposeOfMatrix {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		Scanner in=new Scanner(System.in);
+		int n=in.nextInt();
+		int[][] arr=new int[n][n];
+		for(int i=0;i<n;i++)
+		{
+			for(int j=0;j<n;j++)
+			{
+				arr[i][j]=in.nextInt();
+			}
+		}
+		for(int i=0;i<n;i++)
+		{
+			for(int j=0;j<n;j++)
+			{
+				System.out.print(arr[j][i]+" ");
+			}
+			System.out.println();
+		}
 
 	}
 
