@@ -1,29 +1,49 @@
 package day1strings;
 
-public class SringOccurance {
+public class SringOccurance 
+{
 
-	public static void main(String[] args) {
-		String str="abac";
+	public static void main(String[] args) 
+	{
+		String str="Abac";
 		int[] alp=new int[26];
 		for(int i=0;i<str.length();i++)
 		{
-			int ch=str.charAt(i)-'a';
-			alp[ch]++;
-		}
-		for(int i=0;i<str.length();i++)
-		{
-			int ch=str.charAt(i)-'a';
-			if(alp[ch]>0)
+			int x=str.charAt(i);
 			
-				System.out.println(str.charAt(i)+" "+alp[ch]);
-			
-			
-			if(alp[ch]>1)
+			if(x>='a')
 			{
-				alp[ch]=0;
+				int ch=x-'a';
+				alp[ch]++;
 			}
-			
+			else
+			{
+				int ch=x-'A';
+				alp[ch]++;
+			}
 		}
+		for(int i=0;i<str.length();i++){
+			
+			if(str.charAt(i)>='a')
+			{
+				int val = str.charAt(i) - 'a';
+			    if(alp[val]>0){
+			        System.out.println(str.charAt(i)+" "+alp[val]);
+			        alp[val]=0;
+			    }
+			}
+			else
+			{
+				int val = str.charAt(i) - 'A';
+			    if(alp[val]>0){
+			        System.out.println(str.charAt(i)+" "+alp[val]);
+			        alp[val]=0;
+			    }
+			}
+		    
+		    
+		}
+		
 
 	}
 
