@@ -2,10 +2,9 @@ package string;
 import java.util.Scanner;
 public class LongestSubString {
 
-	static int longestSubString(String str){
-        int sum;
+	static int longestSubString(String str)
+	{   int sum;
         int max=0;
-        
        for(int i=0;i<str.length();i++){
            sum=0;
            //count = 0;

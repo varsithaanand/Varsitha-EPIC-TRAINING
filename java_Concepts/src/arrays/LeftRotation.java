@@ -14,9 +14,6 @@ public class LeftRotation {
 			//arr[(i+rot+1)] Right Rotation
 		}
 		
-		
-		
-		
 		for(int i=0;i<n;i++)
 		{
 			System.out.print(arr[i] +" ");

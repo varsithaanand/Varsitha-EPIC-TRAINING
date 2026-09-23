@@ -8,7 +8,7 @@ public class PresentOrNot {
 		int num=4;
 		for(int i=0;i<n;i++)
 		{
-			if(n==arr[i])
+			if(num==arr[i])
 			{
 				System.out.println("Present");
 			}

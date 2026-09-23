@@ -23,8 +23,8 @@ public class DuplicateNumber {
 	        			{
 		        		if(arr[i]==arr[j] && j<i)
 		        		{
-		        			
 		        			break;
+		        			
 		        			
 		        		}
 		        		else if(arr[i]==arr[j] && j>i)

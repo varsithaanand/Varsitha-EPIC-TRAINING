@@ -5,7 +5,7 @@ public class SecondMax {
 		int[] arr= {5,3,6,7,7,7,7};
 		int n=arr.length;
 	    int count=1;
-	    int pos=4;
+	    int pos=2;
 		for(int i=0;i<n;i++)
 		{
 			for(int j=i+1;j<n;j++)
