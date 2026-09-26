@@ -44,7 +44,6 @@ class Node {
 		Node temp=head;
 		if(pos==1)
 		{
-		    temp.prev=obj;
 		    obj.next=temp;
 		    head=obj;
 		}
@@ -56,19 +55,24 @@ class Node {
 		    if(temp.next==null)
 		    {
 		        tail=obj;
+		        obj.prev=temp;
+		        temp.next=obj;
 		    }
+		    else{
 		    obj.next=temp.next;
 		    obj.prev=temp;
-		
+		    obj.next.prev=obj;
 		    temp.next=obj;
+		    }
+		    
+		    
 		}
-		
 		System.out.print("Successfully inserted");
 	}
    
    void deleteNode(Scanner in)
 	{
-		System.out.println("Enter the position to delete : ");
+		System.out.println("Enter the pos: ");
 		int pos = in.nextInt();
 		Node extra=head;
 		Node temp=head;
@@ -77,27 +81,28 @@ class Node {
 		    temp.next.prev=null;
 		    head=temp.next;
 		}
-	    else{	
-		for(int i=0;i<pos-1;i++)
+		else
+		{
+		    for(int i=0;i<pos-1;i++)
 		    {
 		        extra=temp;
 		        temp=temp.next;
 		    }
-		    System.out.println(extra.data);
-		    System.out.println(temp.data);
-		    if(temp.next==null)
+		   
+		   if(temp.next==null)
 		    {
 		        extra.next=null;
 		        tail=extra;
 		    }
 		    else{
 		        extra.next=temp.next;
-		    temp.next.prev=extra;
+		        temp.next.prev=extra;
 		   
 		    }
-		    
-	    }
-		System.out.print("Successfully deleteded");
+		}
+		
+		
+		System.out.print("Successfully deleted");
 	}
 	void displayReverse() {
 		Node temp=tail;
@@ -133,6 +138,7 @@ public class Main
 			System.out.println("2.Insert a node in middle");
 			System.out.println("3.delete a node");
 			System.out.println("4.display");
+			System.out.println("5.Reverse display");
 			System.out.println("exit");
 			int ch=s.nextInt();
 			switch(ch)
