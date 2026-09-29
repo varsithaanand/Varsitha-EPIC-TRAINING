@@ -149,6 +149,7 @@ public class Main
                 System.out.println("2.Insert a node in middle");
                 System.out.println("3.delete a node");
                 System.out.println("4.display");
+				System.out.println("5.display reverse");
                 System.out.println("exit");
                 int ch=s.nextInt();
                 switch(ch)
